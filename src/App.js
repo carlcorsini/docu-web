@@ -19,11 +19,11 @@ class App extends React.Component {
         </Navbar>
         <Map
           google={this.props.google}
-          initialCenter={{
+          center={{
             lat: this.props.coords.latitude,
             lng: this.props.coords.longitude
           }}
-          zoom={15}
+          zoom={13}
           onClick={this.onMapClicked}
         />
       </div>
