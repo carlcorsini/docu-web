@@ -6,9 +6,11 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
 export class MapContainer extends Component {
   state = { cardDisplay: false };
+
   markerClick = () => {
     this.setState({ cardDisplay: !this.state.cardDisplay });
   };
+
   render() {
     return (
       <div className="container">
