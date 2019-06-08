@@ -6,16 +6,18 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
 export class MapContainer extends Component {
   state = { cardDisplay: false };
+
   markerClick = () => {
     this.setState({ cardDisplay: !this.state.cardDisplay });
   };
+
   render() {
     return (
       <div className="container">
         <Map
           style={{
             width: "70%",
-            height: "70%"
+            height: "60%"
           }}
           google={this.props.google}
           initialCenter={{
@@ -47,7 +49,6 @@ export class MapContainer extends Component {
           }
           textClassName="white-text"
           title="Beach Clean Up"
-          actions={["hey"]}
         >
           Fort Baker Beach Cleanup
         </Card>
