@@ -1,7 +1,8 @@
 import React from "react";
 import Map from "./Map";
+import EventCard from "./components/EventCard";
 import "./App.css";
-import { Navbar, NavItem } from "react-materialize";
+import { Navbar, NavItem, Footer } from "react-materialize";
 import { geolocated } from "react-geolocated";
 
 class App extends React.Component {
@@ -26,6 +27,8 @@ class App extends React.Component {
           zoom={13}
           onClick={this.onMapClicked}
         />
+        <EventCard coords={this.props.coords} />
+        <Footer />
       </div>
     ) : (
       <div>Getting the location data&hellip; </div>
