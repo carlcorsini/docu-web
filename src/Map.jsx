@@ -8,8 +8,14 @@ export class MapContainer extends Component {
   render() {
     return (
       <Map google={this.props.google} zoom={14}>
-        <Marker onClick={this.onMarkerClick} name={"Current location"} />
-
+        <Marker
+          title={"The marker`s title will appear as a tooltip."}
+          name={"SOMA"}
+          position={{
+            lat: this.props.initialCenter.lat,
+            lng: this.props.initialCenter.lng
+          }}
+        />
         <InfoWindow onClose={this.onInfoWindowClose}>
           <div>
             <h1>{"something"}</h1>
