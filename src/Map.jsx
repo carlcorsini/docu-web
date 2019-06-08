@@ -5,13 +5,17 @@ import { Button, Card, Row, Col } from "react-materialize";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
 export class MapContainer extends Component {
+  state = { cardDisplay: false };
+  markerClick = () => {
+    this.setState({ cardDisplay: !this.state.cardDisplay });
+  };
   render() {
     return (
       <div className="container">
         <Map
           style={{
             width: "70%",
-            height: "50%"
+            height: "70%"
           }}
           google={this.props.google}
           initialCenter={{
@@ -22,17 +26,31 @@ export class MapContainer extends Component {
           <Marker
             title={"Galvanize"}
             name={"SOMA"}
+            onClick={this.markerClick}
             position={{
               lat: this.props.center.lat,
               lng: this.props.center.lng
             }}
           />
+
           <InfoWindow onClose={this.onInfoWindowClose}>
             <div>
               <h1>{"something"}</h1>
             </div>
           </InfoWindow>
         </Map>
+
+        <Card
+          className="blue-grey darken-1"
+          style={
+            this.state.cardDisplay ? { display: "block" } : { display: "none" }
+          }
+          textClassName="white-text"
+          title="Beach Clean Up"
+          actions={["hey"]}
+        >
+          Fort Baker Beach Cleanup
+        </Card>
       </div>
     );
   }
