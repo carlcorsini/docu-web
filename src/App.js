@@ -15,19 +15,16 @@ class App extends React.Component {
         {console.log(this.props.coords.latitude, this.props.coords.longitude)}
         <Navbar brand={<a />} alignLinks="left">
           <NavItem onClick={console.log("hey")}>Getting started</NavItem>
-          <NavItem>Components</NavItem>
+          <NavItem href="components.html">Components</NavItem>
         </Navbar>
         <Map
           google={this.props.google}
-          initialCenter={
-            {
-              // lat: this.props.coords.latitude,
-              // lng: this.props.coords.longitude
-            }
-          }
+          initialCenter={{
+            lat: this.props.coords.latitude,
+            lng: this.props.coords.longitude
+          }}
           zoom={15}
           onClick={this.onMapClicked}
-          isGeolocationAvailable={true}
         />
       </div>
     ) : (
@@ -38,13 +35,7 @@ class App extends React.Component {
 
 export default geolocated({
   positionOptions: {
-    enableHighAccuracy: true,
-    maximumAge: 0,
-    timeout: Infinity
+    enableHighAccuracy: false
   },
-  watchPosition: false,
-  userDecisionTimeout: null,
-  suppressLocationOnMount: false,
-  geolocationProvider: navigator.geolocation,
-  isOptimisticGeolocationEnabled: true
+  userDecisionTimeout: 5000
 })(App);
