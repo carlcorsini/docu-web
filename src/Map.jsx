@@ -7,8 +7,10 @@ import {
   TextInput,
   Icon,
   Collection,
-  CollectionItem
+  CollectionItem,
+  CardPanel
 } from "react-materialize";
+require("dotenv").config();
 
 export class MapContainer extends Component {
   state = {
@@ -45,9 +47,9 @@ export class MapContainer extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-    console.log("hey");
+
     try {
-      let response = await fetch("http://localhost:3000/", {
+      let response = await fetch(process.env.REACT_APP_API_URL, {
         method: "POST",
         body: JSON.stringify({
           name: this.state.name,
@@ -62,7 +64,17 @@ export class MapContainer extends Component {
       });
 
       let receipt = await response.json();
-      console.log(receipt);
+      if (receipt.status === "sent") {
+        ReactDOM.render(
+          React.Children.only(
+            <CardPanel className="teal">
+              <span className="white-text">Sent!</span>
+            </CardPanel>
+          ),
+          document.getElementById("iwc")
+        );
+      }
+      // console.log(receipt);
     } catch (error) {}
   };
 
@@ -163,5 +175,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: process.env.API_KEY
+  apiKey: process.env.REACT_APP_API_KEY
 })(MapContainer);

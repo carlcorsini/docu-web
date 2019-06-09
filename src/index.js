@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 // import $ from 'jquery';
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
+require('dotenv').config()
 
 ReactDOM.render( < App / > , document.getElementById('root'));
 

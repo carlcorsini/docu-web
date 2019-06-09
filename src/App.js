@@ -5,6 +5,7 @@ import "./App.css";
 import { Navbar, NavItem } from "react-materialize";
 import { geolocated } from "react-geolocated";
 import { events } from "./events";
+require("dotenv").config();
 
 class App extends React.Component {
   render() {
@@ -14,10 +15,10 @@ class App extends React.Component {
       <div>Geolocation is not enabled</div>
     ) : this.props.coords ? (
       <div className="App">
-        {console.log(this.props.coords.latitude, this.props.coords.longitude)}
+        {/* {console.log(this.props.coords.latitude, this.props.coords.longitude)} */}
         <Navbar alignLinks="left">
-          <NavItem onClick={console.log("hey")}>Getting started</NavItem>
-          <NavItem href="components.html">Components</NavItem>
+          <NavItem>Find and Sign</NavItem>
+          {/* <NavItem href="components.html">Components</NavItem> */}
         </Navbar>
         <Map
           events={events}
