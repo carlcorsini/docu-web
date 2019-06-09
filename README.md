@@ -33,7 +33,7 @@ Deployed via Netlify
 
 ## Testing
 
-<img src="s3://gather-stock/Screen Shot 2019-06-09 at 11.48.27 AM.png" alt="signup" height=400px width=600px />
+<img src="https://gather-stock.s3.us-east-2.amazonaws.com/Screen+Shot+2019-06-09+at+11.48.27+AM.png" alt="demo map" height=400px width=600px />
 
 ## Built With
 
