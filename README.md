@@ -19,22 +19,29 @@ npm start
 Deployed via Netlify
 ## Testing
 <img src="https://gather-stock.s3.us-east-2.amazonaws.com/Screen+Shot+2019-06-09+at+11.48.27+AM.png" alt="demo map" height=400px width=600px />
+
 ## Built With
 - [React.JS](http://www.reactjs.org/) - The web framework used
 - [NPM](https://npm.org/) - Dependency Management
 - [GoogleMapsAPI](https://developers.google.com/) - Used to generate interface
+
 ## Contributing
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+
 ## Authors
 - **Carl Corsini** - _Initial work_ - [carlcorsini](https://github.com/carlcorsini)
 - **Christy Yuen** - _Initial work_
 - **Henry Feng** - _Initial work_
 - **Tyler Pritchard** - _Initial work_ - [tyler-pritchard](https://github.com/tyler-pritchard)
+
 See also the list of [contributors](https://github.com/docu-web/contributors) who participated in this project.
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
 ## Acknowledgments
 - Hat tip to anyone whose code was used
 - Inspiration
