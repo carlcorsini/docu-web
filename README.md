@@ -31,6 +31,10 @@ npm start
 
 Deployed via Netlify
 
+## Testing
+
+<img src="s3://gather-stock/Screen Shot 2019-06-09 at 11.48.27 AM.png" alt="signup" height=400px width=600px />
+
 ## Built With
 
 - [React.JS](http://www.reactjs.org/) - The web framework used
