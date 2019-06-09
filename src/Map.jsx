@@ -358,6 +358,13 @@ export class MapContainer extends Component {
               </div>
             </Modal>
           </NavItem>
+
+          <NavItem href="https://github.com/carlcorsini/docu-web/tree/carls-funhouse">
+            Front End
+          </NavItem>
+          <NavItem href="https://github.com/carlcorsini/docu-back/">
+            Back End
+          </NavItem>
           {/* <NavItem href="components.html">Components</NavItem> */}
         </Navbar>
         <Map
