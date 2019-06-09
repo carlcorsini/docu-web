@@ -36,13 +36,10 @@ export class MapContainer extends Component {
     });
 
   onMapClicked = props => {
-    // if (this.state.showingInfoWindow) {
-    console.log("map clicked");
     this.setState({
       showingInfoWindow: false,
       activeMarker: null
     });
-    // }
   };
 
   handleSubmit = async e => {
