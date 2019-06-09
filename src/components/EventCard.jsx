@@ -3,12 +3,14 @@ import { TextInput } from "react-materialize";
 
 class EventCard extends React.Component {
   render() {
+    const latitude = this.props.coords.latitude;
+    const longitude = this.props.coords.longitude;
     console.log(this.props);
     return (
       <div className="locationText">
         <ul>
-          <li className="lat">Latitude: {this.props.coords.latitude}</li>
-          <li className="long">Longitude: {this.props.coords.longitude}</li>
+          <li className="lat">Latitude: {latitude}</li>
+          <li className="long">Longitude: {longitude}</li>
         </ul>
       </div>
     );
