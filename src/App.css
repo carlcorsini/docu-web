@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+
+
 .App {
   text-align: center;
 }
@@ -31,9 +33,9 @@
 
 .lat {
   display: block;
-  font-size: 60px;
+  font-size: 20px;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 10px;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -47,8 +49,8 @@
 .long {
   display: block;
   font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
+  font-weight: 400;
+  letter-spacing: 10px;
 
   animation: moveInRight 1s ease-out;
 }
@@ -65,9 +67,9 @@
 
 .locationText {
   position: absolute;
-  font-size: 30px;
+  font-size: 10px;
   font-weight: 600;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -40%)
 }
@@ -103,4 +105,21 @@
     opacity: 1;
     transform: translate(0px);
   }
+}
+
+.newForm {
+  background-image: linear-gradient(to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 131, 0.8)),
+    url(./assets/img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  padding-bottom: 40vh;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
 }
