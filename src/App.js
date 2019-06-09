@@ -2,7 +2,7 @@ import React from "react";
 import Map from "./Map";
 
 import "./App.css";
-import { Navbar, NavItem } from "react-materialize";
+
 import { geolocated } from "react-geolocated";
 import { events } from "./events";
 require("dotenv").config();
@@ -16,10 +16,7 @@ class App extends React.Component {
     ) : this.props.coords ? (
       <div className="App">
         {/* {console.log(this.props.coords.latitude, this.props.coords.longitude)} */}
-        <Navbar alignLinks="left">
-          <NavItem>Find and Sign</NavItem>
-          {/* <NavItem href="components.html">Components</NavItem> */}
-        </Navbar>
+
         <Map
           events={events}
           center={{
