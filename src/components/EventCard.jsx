@@ -1,5 +1,11 @@
 import React from "react";
-import { TextInput, DatePicker, TimePicker } from "react-materialize";
+import {
+  TextInput,
+  DatePicker,
+  TimePicker,
+  Button,
+  Icon
+} from "react-materialize";
 
 class EventCard extends React.Component {
   render() {
@@ -31,6 +37,11 @@ class EventCard extends React.Component {
             <li className="long">Longitude: {longitude}</li>
           </ul>
         </section>
+
+        <Button type="submit" waves="light">
+          Submit
+          <Icon right>send</Icon>
+        </Button>
       </div>
     );
   }
