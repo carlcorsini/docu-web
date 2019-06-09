@@ -44,6 +44,7 @@ export class MapContainer extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
+    console.log("hey");
 
     try {
       let response = await fetch(process.env.REACT_APP_API_URL, {
