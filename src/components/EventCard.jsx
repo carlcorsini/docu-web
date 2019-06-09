@@ -1,17 +1,36 @@
 import React from "react";
-import { TextInput } from "react-materialize";
+import { TextInput, DatePicker, TimePicker } from "react-materialize";
 
 class EventCard extends React.Component {
   render() {
     const latitude = this.props.coords.latitude;
     const longitude = this.props.coords.longitude;
-    console.log(this.props);
+
     return (
-      <div className="locationText">
-        <ul>
-          <li className="lat">Latitude: {latitude}</li>
-          <li className="long">Longitude: {longitude}</li>
-        </ul>
+      <div className="newForm">
+        <h1>Submit Event</h1>
+        <h2>
+          Title: <TextInput />
+        </h2>
+        <h2>
+          Description: <TextInput />
+        </h2>
+        <section>
+          <h2>Date:</h2>
+          <DatePicker />
+        </section>
+
+        <section>
+          <h2>Time: </h2>
+          <TimePicker />
+        </section>
+
+        <section>
+          <ul className="locationText">
+            <li className="lat">Latitude: {latitude}</li>
+            <li className="long">Longitude: {longitude}</li>
+          </ul>
+        </section>
       </div>
     );
   }

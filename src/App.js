@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+
 import Map from "./Map";
 import EventCard from "./components/EventCard";
 import "./App.css";
@@ -12,24 +14,34 @@ class App extends React.Component {
     ) : !this.props.isGeolocationEnabled ? (
       <div>Geolocation is not enabled</div>
     ) : this.props.coords ? (
-      <div className="App">
+      <Router>
         {console.log(this.props.coords.latitude, this.props.coords.longitude)}
         <Navbar brand={<a />} alignLinks="left">
           <NavItem onClick={console.log("hey")}>Getting started</NavItem>
           <NavItem href="components.html">Components</NavItem>
         </Navbar>
-        <Map
-          google={this.props.google}
-          center={{
-            lat: this.props.coords.latitude,
-            lng: this.props.coords.longitude
-          }}
-          zoom={13}
-          onClick={this.onMapClicked}
+        <Route
+          exact
+          path="/"
+          component={() => (
+            <Map
+              google={this.props.google}
+              center={{
+                lat: this.props.coords.latitude,
+                lng: this.props.coords.longitude
+              }}
+              zoom={13}
+              onClick={this.onMapClicked}
+            />
+          )}
         />
-        <EventCard coords={this.props.coords} />
+        <Route
+          exact
+          path="/events"
+          component={() => <EventCard coords={this.props.coords} />}
+        />
         <Footer />
-      </div>
+      </Router>
     ) : (
       <div>Getting the location data&hellip; </div>
     );
